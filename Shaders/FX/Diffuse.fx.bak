@@ -1,0 +1,71 @@
+//////////////////////////////////////////////////////////////////////
+// GLOBALS
+//////////////////////////////////////////////////////////////////////
+float4x4 	matWorld;
+float4x4 	matWorldViewProjection;
+float4		lightDir;
+
+texture 	baseTexture;
+
+sampler2D baseSampler = sampler_state
+{
+    Texture = <baseTexture>;
+    AddressU = Clamp;
+    AddressV = Clamp;
+    MinFilter = Anisotropic;
+    MagFilter = Anisotropic;
+    MipFilter = Anisotropic;
+};
+
+//////////////////////////////////////////////////////////////////////
+// VERTEX SHADER
+//////////////////////////////////////////////////////////////////////
+struct VS_INPUT
+{
+	float4 Position : POSITION;
+	float3 Normal		: NORMAL;
+	float2 Tex			:	TEXCOORD0;
+};
+
+struct VS_OUTPUT
+{
+	float4 Position : POSITION;
+	float3 Normal		: TEXCOORD0;
+	float2 Tex			:	TEXCOORD1;
+};
+
+VS_OUTPUT mainVS(VS_INPUT In)
+{
+	VS_OUTPUT Out;
+	
+	Out.Position = mul(In.Position, matWorldViewProjection);
+	In.Normal	 = mul(In.Normal, matWorld);
+		
+	Out.Normal = normalize(In.Normal);
+	Out.Tex		 = In.Tex;
+	
+	return Out;
+}
+
+//////////////////////////////////////////////////////////////////////
+// PIXEL SHADER
+//////////////////////////////////////////////////////////////////////
+float4 mainPS(float3 Normal : TEXCOORD0, float2 Tex : TEXCOORD1) : COLOR
+{
+	float4 baseColor = tex2D(baseSampler, Tex);
+	float4 Diffuse = max(0,dot(Normal, normalize(lightDir.xyz)));
+	
+	return ( Diffuse * baseColor);
+}
+
+//////////////////////////////////////////////////////////////////////
+// TECHNIQUES
+//////////////////////////////////////////////////////////////////////
+technique Diffuse
+{
+    pass P0
+    {
+        VertexShader = compile vs_3_0 mainVS();
+        PixelShader  = compile ps_3_0 mainPS();
+    }
+}

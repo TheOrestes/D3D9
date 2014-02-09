@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{76DA94E6-E5FF-49B9-A84E-D49F10E4E84D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Engine_2010</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;D3D_DEBUG_INFO;ASSIMP_BUILD_BOOST_WORKAROUND;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Program Files\Assimp\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3dx9d.lib;d3d9.lib;winmm.lib;comctl32.lib;dinput8.lib;assimp.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files\Assimp\lib\x86</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>d3dx9.lib;d3d9.lib;winmm.lib;comctl32.lib;dinput8.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Engine\Clock.cpp" />
+    <ClCompile Include="Engine\Engine.cpp" />
+    <ClCompile Include="Foliage\Grass.cpp" />
+    <ClCompile Include="Game\Camera.cpp" />
+    <ClCompile Include="Game\Game.cpp" />
+    <ClCompile Include="GeometrySystem\AssimpLoader.cpp" />
+    <ClCompile Include="GeometrySystem\GameObjectManager.cpp" />
+    <ClCompile Include="GeometrySystem\MeshObject.cpp" />
+    <ClCompile Include="GeometrySystem\Model.cpp" />
+    <ClCompile Include="GeometrySystem\GameObject.cpp" />
+    <ClCompile Include="GeometrySystem\ObjMeshLoader.cpp" />
+    <ClCompile Include="GeometrySystem\StaticGeometryManager.cpp" />
+    <ClCompile Include="GeometrySystem\Vertex.cpp" />
+    <ClCompile Include="InputSystem\InputDevice.cpp" />
+    <ClCompile Include="LightingSystem\DirectionalLightObject.cpp" />
+    <ClCompile Include="LightingSystem\LightsManager.cpp" />
+    <ClCompile Include="LightingSystem\PointLightObject.cpp" />
+    <ClCompile Include="LightingSystem\SpotLightObject.cpp" />
+    <ClCompile Include="Misc\EngineStats.cpp" />
+    <ClCompile Include="Misc\LogManager.cpp" />
+    <ClCompile Include="Misc\Screenshot.cpp" />
+    <ClCompile Include="Parser\LevelParser.cpp" />
+    <ClCompile Include="Parser\TextParser.cpp" />
+    <ClCompile Include="ParticleSystem\CampFire.cpp" />
+    <ClCompile Include="ParticleSystem\DiwaliPaus.cpp" />
+    <ClCompile Include="ParticleSystem\FireRing.cpp" />
+    <ClCompile Include="ParticleSystem\ParticleFactory.cpp" />
+    <ClCompile Include="ParticleSystem\ParticleSystem.cpp" />
+    <ClCompile Include="ParticleSystem\Rain.cpp" />
+    <ClCompile Include="ParticleSystem\Sprinkler.cpp" />
+    <ClCompile Include="Renderables\BruteForceTerrain.cpp" />
+    <ClCompile Include="Renderables\Skybox.cpp" />
+    <ClCompile Include="Renderables\StaticGeometry.cpp" />
+    <ClCompile Include="RenderDevice\PostProcess.cpp" />
+    <ClCompile Include="RenderDevice\RenderDevice.cpp" />
+    <ClCompile Include="Scene\Scene.cpp" />
+    <ClCompile Include="ShaderEngine\FxShader.cpp" />
+    <ClCompile Include="ShaderEngine\Shader.cpp" />
+    <ClCompile Include="System.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Engine\Clock.h" />
+    <ClInclude Include="Engine\Engine.h" />
+    <ClInclude Include="Foliage\Grass.h" />
+    <ClInclude Include="Game\Camera.h" />
+    <ClInclude Include="Game\Game.h" />
+    <ClInclude Include="GeometrySystem\AssimpLoader.h" />
+    <ClInclude Include="GeometrySystem\GameObjectManager.h" />
+    <ClInclude Include="GeometrySystem\IObject.h" />
+    <ClInclude Include="GeometrySystem\MeshObject.h" />
+    <ClInclude Include="GeometrySystem\Model.h" />
+    <ClInclude Include="GeometrySystem\GameObject.h" />
+    <ClInclude Include="GeometrySystem\ObjMeshLoader.h" />
+    <ClInclude Include="GeometrySystem\StaticGeometryManager.h" />
+    <ClInclude Include="GeometrySystem\Vertex.h" />
+    <ClInclude Include="InputSystem\InputDevice.h" />
+    <ClInclude Include="InputSystem\InputManager.h" />
+    <ClInclude Include="InputSystem\InputState.h" />
+    <ClInclude Include="InputSystem\IObserver.h" />
+    <ClInclude Include="InputSystem\ISubject.h" />
+    <ClInclude Include="LightingSystem\DirectionalLightObject.h" />
+    <ClInclude Include="LightingSystem\LightsManager.h" />
+    <ClInclude Include="LightingSystem\PointLightObject.h" />
+    <ClInclude Include="LightingSystem\SpotLightObject.h" />
+    <ClInclude Include="Misc\D3DHelper.h" />
+    <ClInclude Include="Misc\EngineStats.h" />
+    <ClInclude Include="Misc\Helper.h" />
+    <ClInclude Include="Misc\LogManager.h" />
+    <ClInclude Include="Misc\Screenshot.h" />
+    <ClInclude Include="Parser\LevelParser.h" />
+    <ClInclude Include="Parser\TextParser.h" />
+    <ClInclude Include="ParticleSystem\CampFire.h" />
+    <ClInclude Include="ParticleSystem\DiwaliPaus.h" />
+    <ClInclude Include="ParticleSystem\FireRing.h" />
+    <ClInclude Include="ParticleSystem\ParticleFactory.h" />
+    <ClInclude Include="ParticleSystem\ParticleSystem.h" />
+    <ClInclude Include="ParticleSystem\ParticleType.h" />
+    <ClInclude Include="ParticleSystem\Rain.h" />
+    <ClInclude Include="ParticleSystem\Sprinkler.h" />
+    <ClInclude Include="Renderables\BruteForceTerrain.h" />
+    <ClInclude Include="Renderables\Skybox.h" />
+    <ClInclude Include="Renderables\StaticGeometry.h" />
+    <ClInclude Include="RenderDevice\PostProcess.h" />
+    <ClInclude Include="RenderDevice\RenderDevice.h" />
+    <ClInclude Include="Scene\Scene.h" />
+    <ClInclude Include="ShaderEngine\CgShader.h" />
+    <ClInclude Include="ShaderEngine\FxShader.h" />
+    <ClInclude Include="ShaderEngine\HLSLShader.h" />
+    <ClInclude Include="ShaderEngine\Shader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Level\Level1.scn" />
+    <None Include="Shaders\FX\AmbientLighting.fx" />
+    <None Include="Shaders\FX\CampFire.fx" />
+    <None Include="Shaders\FX\CookTorrance.fx" />
+    <None Include="Shaders\FX\Default.fx" />
+    <None Include="Shaders\FX\DepthPass.fx" />
+    <None Include="Shaders\FX\Diffuse.fx" />
+    <None Include="Shaders\FX\DiwaliPaus.fx" />
+    <None Include="Shaders\FX\firering.fx" />
+    <None Include="Shaders\FX\Grass.fx" />
+    <None Include="Shaders\FX\MeshFromOBJ.fx" />
+    <None Include="Shaders\FX\PostProcess.fx" />
+    <None Include="Shaders\FX\rain.fx" />
+    <None Include="Shaders\FX\sky.fx" />
+    <None Include="Shaders\FX\Specular.fx" />
+    <None Include="Shaders\FX\sprinkler.fx" />
+    <None Include="Shaders\FX\SSAO_PrePass.fx" />
+    <None Include="Shaders\FX\Terrain.fx" />
+    <None Include="To Do.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

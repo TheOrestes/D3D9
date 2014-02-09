@@ -1,0 +1,10 @@
+Debug/
+Data/
+Log/
+ipch/
+
+*.dll
+*.sdf
+*.suo
+*.user
+*.txt

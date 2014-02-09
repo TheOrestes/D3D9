@@ -1,0 +1,84 @@
+//////////////////////////////////////////////////////////////////////
+// GLOBALS
+//////////////////////////////////////////////////////////////////////
+float4x4 	matWorld;
+float4x4 	matWorldViewProjection;
+float4		lightDir;
+float4		Eye;
+
+float			CoeffSpec = 4.0f;
+
+// Ambient Occlusion Factor
+float4		Sky 		= float4(0.0f, 0.0f, 0.2f, 1.0f);
+float4		Ground 	= float4(0.0f, 0.2f, 0.0f, 1.0f);
+
+texture 	baseTexture;
+
+sampler2D baseSampler = sampler_state
+{
+    Texture = <baseTexture>;
+    AddressU = Wrap;
+    AddressV = Wrap;
+    MinFilter = Anisotropic;
+    MagFilter = Anisotropic;
+    MipFilter = Anisotropic;
+};
+
+//////////////////////////////////////////////////////////////////////
+// VERTEX SHADER
+//////////////////////////////////////////////////////////////////////
+struct VS_INPUT
+{
+	float4 Position : POSITION;
+	float3 Normal		: NORMAL;
+	float2 Tex			:	TEXCOORD0;
+};
+
+struct VS_OUTPUT
+{
+	float4 Position : POSITION;
+	float3 Normal		: TEXCOORD0;
+	float2 Tex			:	TEXCOORD1;
+	float4 Half			: TEXCOORD2;
+};
+
+VS_OUTPUT mainVS(VS_INPUT In)
+{
+	VS_OUTPUT Out;
+	
+	Out.Position = mul(In.Position, matWorldViewProjection);
+	In.Normal	 = mul(In.Normal, matWorld);
+		
+	Out.Normal = normalize(In.Normal);
+	Out.Tex 	 = In.Tex;
+	
+	Out.Half = normalize(normalize(Eye - In.Position) + normalize(lightDir));
+	
+	return Out;
+}
+
+//////////////////////////////////////////////////////////////////////
+// PIXEL SHADER
+//////////////////////////////////////////////////////////////////////
+float4 mainPS(float3 Normal : TEXCOORD0, float3 Tex : TEXCOORD1, float4 Half : TEXCOORD2) : COLOR
+{
+	float4 baseColor = tex2D(baseSampler, Tex) * 1.75f;
+	
+	float4 Diffuse = max(0,dot(Normal, normalize(lightDir.xyz)));
+	
+	float4 Specular = pow(dot(Normal, Half), CoeffSpec);
+	
+	return (( Diffuse + Specular) * baseColor);
+}
+
+//////////////////////////////////////////////////////////////////////
+// TECHNIQUES
+//////////////////////////////////////////////////////////////////////
+technique Specular
+{
+    pass P0
+    {
+        VertexShader = compile vs_3_0 mainVS();
+        PixelShader  = compile ps_3_0 mainPS();
+    }
+}

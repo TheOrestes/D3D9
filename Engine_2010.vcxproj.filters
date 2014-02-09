@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{2d7533d7-1b88-4b2c-8b8a-6ad8a06ac1cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Foliage">
+      <UniqueIdentifier>{923ada90-1cc4-4831-b5a3-590e81848b26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GeometrySystem">
+      <UniqueIdentifier>{f474d720-becd-4766-8629-16da25910a34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="InputSystem">
+      <UniqueIdentifier>{697dffc7-5c1c-4934-bfc7-7a512f8b5ac6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LightingSystem">
+      <UniqueIdentifier>{69f10336-7f6b-4518-a94a-f82ff0906922}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc">
+      <UniqueIdentifier>{71219e2c-69cb-4ea5-b9fa-047bfa51f354}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parser">
+      <UniqueIdentifier>{d663fde0-2cc7-49e0-80e3-b56d4631dd13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ParticleSystem">
+      <UniqueIdentifier>{21fa1839-7b4b-48ab-b42b-3f3c4f81e2dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ShaderEngine">
+      <UniqueIdentifier>{5bd1d5b8-6b09-4632-bb0d-29fc04152eeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{c46edd91-b0d8-44f7-bc21-4906dd2bd8a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ToDo">
+      <UniqueIdentifier>{59337a6c-07a4-40fa-b724-d4b986ed2ef2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{6b07429c-fcc4-4450-a3cc-3d98ac0c75cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{281199d2-bd9e-4f01-a4c6-5f0351a612d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderSystem">
+      <UniqueIdentifier>{3d861fbd-9950-46d4-b60d-28cdc5c9db80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\Fx">
+      <UniqueIdentifier>{2076378e-613e-44b9-92c6-60b7356c87a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\Particles">
+      <UniqueIdentifier>{36ef32cb-fab2-4973-8d4b-14eac6c19c7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{b2d813e3-2094-4318-a8fd-d0e80ca88e93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderables">
+      <UniqueIdentifier>{d42331fa-5b0a-4f81-853c-e6b2e321c203}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Engine\Engine.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Foliage\Grass.cpp">
+      <Filter>Foliage</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Camera.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Game.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GeometrySystem\StaticGeometryManager.cpp">
+      <Filter>GeometrySystem</Filter>
+    </ClCompile>
+    <ClCompile Include="GeometrySystem\Vertex.cpp">
+      <Filter>GeometrySystem</Filter>
+    </ClCompile>
+    <ClCompile Include="InputSystem\InputDevice.cpp">
+      <Filter>InputSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Misc\EngineStats.cpp">
+      <Filter>Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Misc\LogManager.cpp">
+      <Filter>Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Misc\Screenshot.cpp">
+      <Filter>Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Parser\TextParser.cpp">
+      <Filter>Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleSystem\CampFire.cpp">
+      <Filter>ParticleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleSystem\DiwaliPaus.cpp">
+      <Filter>ParticleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleSystem\FireRing.cpp">
+      <Filter>ParticleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleSystem\ParticleFactory.cpp">
+      <Filter>ParticleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleSystem\ParticleSystem.cpp">
+      <Filter>ParticleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleSystem\Rain.cpp">
+      <Filter>ParticleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleSystem\Sprinkler.cpp">
+      <Filter>ParticleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderables\BruteForceTerrain.cpp">
+      <Filter>Renderables</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderables\Skybox.cpp">
+      <Filter>Renderables</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderables\StaticGeometry.cpp">
+      <Filter>Renderables</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderDevice\RenderDevice.cpp">
+      <Filter>RenderSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderDevice\PostProcess.cpp">
+      <Filter>RenderSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderEngine\FxShader.cpp">
+      <Filter>ShaderEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderEngine\Shader.cpp">
+      <Filter>ShaderEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="System.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene\Scene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="GeometrySystem\ObjMeshLoader.cpp">
+      <Filter>GeometrySystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Clock.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="GeometrySystem\GameObject.cpp">
+      <Filter>GeometrySystem</Filter>
+    </ClCompile>
+    <ClCompile Include="GeometrySystem\AssimpLoader.cpp">
+      <Filter>GeometrySystem</Filter>
+    </ClCompile>
+    <ClCompile Include="GeometrySystem\Model.cpp">
+      <Filter>GeometrySystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Parser\LevelParser.cpp">
+      <Filter>Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="GeometrySystem\GameObjectManager.cpp">
+      <Filter>GeometrySystem</Filter>
+    </ClCompile>
+    <ClCompile Include="GeometrySystem\MeshObject.cpp">
+      <Filter>GeometrySystem</Filter>
+    </ClCompile>
+    <ClCompile Include="LightingSystem\DirectionalLightObject.cpp">
+      <Filter>LightingSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="LightingSystem\PointLightObject.cpp">
+      <Filter>LightingSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="LightingSystem\SpotLightObject.cpp">
+      <Filter>LightingSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="LightingSystem\LightsManager.cpp">
+      <Filter>LightingSystem</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Engine\Engine.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Foliage\Grass.h">
+      <Filter>Foliage</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Camera.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Game.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GeometrySystem\StaticGeometryManager.h">
+      <Filter>GeometrySystem</Filter>
+    </ClInclude>
+    <ClInclude Include="GeometrySystem\Vertex.h">
+      <Filter>GeometrySystem</Filter>
+    </ClInclude>
+    <ClInclude Include="InputSystem\InputDevice.h">
+      <Filter>InputSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="InputSystem\InputManager.h">
+      <Filter>InputSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="InputSystem\InputState.h">
+      <Filter>InputSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="InputSystem\IObserver.h">
+      <Filter>InputSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="InputSystem\ISubject.h">
+      <Filter>InputSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Misc\D3DHelper.h">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Misc\EngineStats.h">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Misc\Helper.h">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Misc\LogManager.h">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Misc\Screenshot.h">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Parser\TextParser.h">
+      <Filter>Parser</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleSystem\CampFire.h">
+      <Filter>ParticleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleSystem\DiwaliPaus.h">
+      <Filter>ParticleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleSystem\FireRing.h">
+      <Filter>ParticleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleSystem\ParticleFactory.h">
+      <Filter>ParticleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleSystem\ParticleSystem.h">
+      <Filter>ParticleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleSystem\ParticleType.h">
+      <Filter>ParticleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleSystem\Rain.h">
+      <Filter>ParticleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleSystem\Sprinkler.h">
+      <Filter>ParticleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderables\BruteForceTerrain.h">
+      <Filter>Renderables</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderables\Skybox.h">
+      <Filter>Renderables</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderables\StaticGeometry.h">
+      <Filter>Renderables</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderDevice\RenderDevice.h">
+      <Filter>RenderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderDevice\PostProcess.h">
+      <Filter>RenderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderEngine\CgShader.h">
+      <Filter>ShaderEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderEngine\FxShader.h">
+      <Filter>ShaderEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderEngine\HLSLShader.h">
+      <Filter>ShaderEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderEngine\Shader.h">
+      <Filter>ShaderEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene\Scene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="GeometrySystem\ObjMeshLoader.h">
+      <Filter>GeometrySystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Clock.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="GeometrySystem\GameObject.h">
+      <Filter>GeometrySystem</Filter>
+    </ClInclude>
+    <ClInclude Include="GeometrySystem\AssimpLoader.h">
+      <Filter>GeometrySystem</Filter>
+    </ClInclude>
+    <ClInclude Include="GeometrySystem\Model.h">
+      <Filter>GeometrySystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Parser\LevelParser.h">
+      <Filter>Parser</Filter>
+    </ClInclude>
+    <ClInclude Include="GeometrySystem\GameObjectManager.h">
+      <Filter>GeometrySystem</Filter>
+    </ClInclude>
+    <ClInclude Include="GeometrySystem\IObject.h">
+      <Filter>GeometrySystem</Filter>
+    </ClInclude>
+    <ClInclude Include="GeometrySystem\MeshObject.h">
+      <Filter>GeometrySystem</Filter>
+    </ClInclude>
+    <ClInclude Include="LightingSystem\DirectionalLightObject.h">
+      <Filter>LightingSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="LightingSystem\PointLightObject.h">
+      <Filter>LightingSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="LightingSystem\SpotLightObject.h">
+      <Filter>LightingSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="LightingSystem\LightsManager.h">
+      <Filter>LightingSystem</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\FX\Default.fx">
+      <Filter>Shaders\Fx</Filter>
+    </None>
+    <None Include="Shaders\FX\Diffuse.fx">
+      <Filter>Shaders\Fx</Filter>
+    </None>
+    <None Include="Shaders\FX\Grass.fx">
+      <Filter>Shaders\Fx</Filter>
+    </None>
+    <None Include="Shaders\FX\PostProcess.fx">
+      <Filter>Shaders\Fx</Filter>
+    </None>
+    <None Include="Shaders\FX\sky.fx">
+      <Filter>Shaders\Fx</Filter>
+    </None>
+    <None Include="Shaders\FX\Specular.fx">
+      <Filter>Shaders\Fx</Filter>
+    </None>
+    <None Include="Shaders\FX\Terrain.fx">
+      <Filter>Shaders\Fx</Filter>
+    </None>
+    <None Include="Shaders\FX\CampFire.fx">
+      <Filter>Shaders\Particles</Filter>
+    </None>
+    <None Include="Shaders\FX\DiwaliPaus.fx">
+      <Filter>Shaders\Particles</Filter>
+    </None>
+    <None Include="Shaders\FX\firering.fx">
+      <Filter>Shaders\Particles</Filter>
+    </None>
+    <None Include="Shaders\FX\rain.fx">
+      <Filter>Shaders\Particles</Filter>
+    </None>
+    <None Include="Shaders\FX\sprinkler.fx">
+      <Filter>Shaders\Particles</Filter>
+    </None>
+    <None Include="To Do.txt">
+      <Filter>ToDo</Filter>
+    </None>
+    <None Include="Shaders\FX\MeshFromOBJ.fx">
+      <Filter>Shaders\Fx</Filter>
+    </None>
+    <None Include="Data\Level\Level1.scn">
+      <Filter>Scene</Filter>
+    </None>
+    <None Include="Shaders\FX\CookTorrance.fx">
+      <Filter>Shaders\Fx</Filter>
+    </None>
+    <None Include="Shaders\FX\AmbientLighting.fx">
+      <Filter>Shaders\Fx</Filter>
+    </None>
+    <None Include="Shaders\FX\DepthPass.fx">
+      <Filter>Shaders\Fx</Filter>
+    </None>
+    <None Include="Shaders\FX\SSAO_PrePass.fx">
+      <Filter>Shaders\Fx</Filter>
+    </None>
+  </ItemGroup>
+</Project>
